@@ -1,6 +1,6 @@
-# apache
+# Configuracion HTTPS
 
-## Configuracion HTTPS
+## Creacion de certificado digital para nuestro site
 
 Crear claves RSA de 2048 bit
 
@@ -27,18 +27,21 @@ sudo chown root:ssl-cert /etc/ssl/private/seguro.key
 sudo chmod 640 /etc/ssl/private/seguro.key
 sudo chown root:root /etc/ssl/certs/seguro.crt 
 ```
-Creamos el PEM
+Creamos el certificado PEM:
+
 ```
 cat seguro.key seguro.crt > nombre-sitio.pem
 cp nombre-sitio.pem /etc/ssl/private/
 ```
+# Modificacion del archivo de configuracion del site
+
 Modificaremos el site, comprobando que dentro de virtualhost tenemos las siguientes
 directivas:
 ```
 SSLEngine on
 SSLCertificateFile /etc/ssl/private/nombre-sitio.pem
 ```
-Hay que comentar la opción SSLCertificateKeyFile
+Hay que comentar la opción SSLCertificateKeyFile para que no afecte.
 
 En la directiva Directory /var/www/html debe de aparecer la siguiente configuracion:
 ```
