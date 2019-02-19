@@ -45,7 +45,7 @@ sudo chown root:root /etc/ssl/certs/seguro.crt
 ## Conversión del certificado
 
 Las claves y certificados se pueden guardar en varios formatos diferentes, por lo que podemos 
-convertir entre uno y otro formato. Convertimos el certificado al formato PEM:
+convertir entre uno y otro formato. Agrupamos en un mismo archivo la clave y el certificado:
 
 ```
 cat seguro.key seguro.crt > nombre-sitio.pem
