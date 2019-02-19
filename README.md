@@ -87,6 +87,17 @@ sudo systemctl restart apache2
 El mecanismo que podemos utilizar es el de editar el site que tengamos configurado para HTTP (normalmente el de defecto) y agregar la línea:
 
 ```
-Redirect / https://192.168.1.101
+<VirtualHost *:80>
+        ServerName moodle.midominio.com
+        ServerAdmin webmaster@midominio.com
+        DocumentRoot /var/www/html
+        Redirect / https://moodle.midominio.com
+</VirtualHost>
+
 ```
 Cambiando la IP por el nombre de dominio de nuestra página.
+A continuación reiniciar el servidor 
+
+```
+sudo systemctl restart apache2
+```
