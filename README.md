@@ -33,7 +33,7 @@ Creamos el certificado PEM:
 cat seguro.key seguro.crt > nombre-sitio.pem
 cp nombre-sitio.pem /etc/ssl/private/
 ```
-# Modificacion del archivo de configuracion del site
+## Modificacion del archivo de configuracion del site
 
 Modificaremos el site, comprobando que dentro de virtualhost tenemos las siguientes
 directivas:
