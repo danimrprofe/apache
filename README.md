@@ -82,3 +82,11 @@ sudo a2ensite default-ssl
 ```
 sudo systemctl restart apache2
 ```
+## Redirección HTTP a HTTPS
+
+El mecanismo que podemos utilizar es el de editar el site que tengamos configurado para HTTP (normalmente el de defecto) y agregar la línea:
+
+```
+Redirect / https://192.168.1.101
+```
+Cambiando la IP por el nombre de dominio de nuestra página.
