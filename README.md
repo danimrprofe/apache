@@ -103,6 +103,9 @@ sudo systemctl restart apache2
 ```
 # Problemas con el cambio de sites de HTTP a HTTPS
 Puede pasar que al cambiar el acceso de un tipo a otro, tengamos problemas como que la página no carga o no carga del todo. Para ello, se pueden hacer algunas modificaciones.
+```
+$CFG->wwwroot   = 'https://dominio.com';
+```
 ## Moodle
 Cambiar la IP por el nombre de dominio en el archivo config.php
 ## Wordpress
