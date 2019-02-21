@@ -106,7 +106,7 @@ Puede pasar que al cambiar el acceso de un tipo a otro, tengamos problemas como 
 ## Moodle
 Cambiar la IP por el nombre de dominio en el archivo config.php
 ## Wordpress
-Modificar el archivo config.php y agregar/cambiar las siguientes opciones:
+Modificar el archivo wp-config.php y agregar/cambiar las siguientes opciones:
 ```
 define('WP_HOME','https://dominio.com');
 define('WP_SITEURL','https://dominio.com');
